@@ -1,4 +1,11 @@
 # This file should be copied to /etc/udev/rules.d on GNU/Linux OS and derived
 # Add permission to all user to have complete acces to eeprom programmer CH341
-SUBSYSTEM=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="5512|55db", TAG+="uaccess"
 
+# CH341A
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="5512", TAG+="uaccess"
+
+# CH347
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55db", TAG+="uaccess"
+
+# CH554T
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1fc8", ATTRS{idProduct}=="310b", TAG+="uaccess"
